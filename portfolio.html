@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0
+        }
+        body{
+            background-color: rgb(19, 10, 37);
+            color:white
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            height: 70px;
+            background-color:rgb(35, 20, 66);
+             
+        }
+        nav ul{
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin:0px 25px;
+            color:white;
+        }
+        
+    
+        nav ul li:hover{
+            color:violet;
+            font-size: 25px;
+        }
+        .left{
+            font-size: 25px;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0px;
+        }
+        .leftSection{
+            margin-left: 65px;
+            color:white;
+            margin-top: 70px;
+        }
+    
+        .firstSection > div{
+            width:30%;
+            font-size: 42px;
+        }
+        .rightSection img{
+            width: 130%;
+            margin-right: 100px ;
+        }
+        .purple{
+            color:rgb(248, 128, 72)
+        }
+        .secondSection{
+            margin:auto;
+            max-width: 80vw;
+        }
+        main hr{
+            border: 0;
+            height:1px;
+            margin: 40px 80px;
+            background: rgb(89, 89, 147);
+        }
+        h1,h2{
+            font-size: 50px;
+            margin:18px
+        }
+        .badge {
+        display:inline-block ;
+        background-color:rgb(54, 54, 97);
+        border-radius: 20px;
+        padding: 5px 10px;
+        margin: 50px;
+        font-size: 35px;
+        align-items: center;
+        }
+        .badge:hover{
+            color: bisque;
+            font-size: 50px;
+        }
+       
+#contact {
+    background-color: #181818;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0;
+    color: #e0e0e0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    transition: border 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #ff9f43;
+}
+
+form .btn {
+    background-color: #ff9f43;
+    color: #1e1e1e;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form .btn:hover {
+    background-color: #e88931;
+    box-shadow: 0 4px 10px rgba(255, 159, 67, 0.4);
+}
+
+#contact {
+    padding-left:160px;
+    background-color: rgb(19, 10, 37);
+    color: #e0e0e0;
+    font-size: 0.9rem;
+ }
+ form{
+    padding-left: 60px;
+ }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Yashvi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <a href="/"><li>Home</li></a>
+                    <a href="/"><li>About</li></a>
+                    <a href="/"><li>Projects</li></a>
+                    <a href="/"><li>Contact</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Yashvi</span> and
+                <div>I am an aspiring </div>
+                <span class="purple" id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="wb-removebg-preview.png" />
+            </div>
+        </section>
+        
+        <hr>
+        <section class="secondSection">
+            <h1>SKILLS</h1>
+            <div class="badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">Python</span>
+                <span class="badge">Cybersecurity</span>
+            </div>
+            
+            
+            
+        </section>
+     
+
+        <hr>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+        </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Web Developer.', '<i>Programmer.', '<i>Cybersecurity Enthusiast.'],
+      typeSpeed: 40,
+    });
+  </script>
+
+ 
+
+</body>
+</html>
